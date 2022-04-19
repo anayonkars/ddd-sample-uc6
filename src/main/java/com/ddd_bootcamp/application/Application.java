@@ -4,11 +4,36 @@ import com.ddd_bootcamp.domain.Cart;
 import com.ddd_bootcamp.domain.Item;
 import com.ddd_bootcamp.domain.Product;
 
-import javax.lang.model.SourceVersion;
 import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
+        //codeProblem1to5();
+
+        //Code Problem 6
+        Cart cart1 = new Cart();
+        Cart cart2 = new Cart();
+
+        Product headphone1 = new Product("Sony Wireless headphone");
+        Item headphoneItem1 = new Item(headphone1,1);
+
+        Product headphone2 = new Product("Sony Wireless headphone");
+        Item headphoneItem2= new Item(headphone2,1);
+
+        cart1.add(headphoneItem1);
+        cart2.add(headphoneItem2);
+
+        System.out.println("----------------------------------------");
+        System.out.print("cart1.equals(cart2) :");
+        System.out.println(cart1.equals(cart2)? "true=Carts are same " : "false=Carts are different");
+        System.out.println("----------------------------------------");
+        System.out.print("cart1.hasSameIdentityAs(cart2) :");
+        System.out.println(cart1.hasSameIdentityAs(cart2)? "true=Carts are same"  : "false=Carts are different");
+        System.out.println("----------------------------------------");
+
+    }
+
+    private static void codeProblem1to5() {
         Cart cart = new Cart();
 
         Product headphone = new Product("Sony Wireless headphone");
@@ -37,22 +62,5 @@ public class Application {
 
         System.out.println("----------------------------------------");
         System.out.println("Removed product names = " + cart.removedProductNames());
-
-
-        //Code Problem 6
-        Cart cart1 = new Cart();
-        Cart cart2 = new Cart();
-
-        Product headphone1 = new Product("Sony Wireless headphone");
-        Item headphoneItem1 = new Item(headphone1,1);
-
-        Product headphone2 = new Product("Sony Wireless headphone");
-        Item headphoneItem2= new Item(headphone2,1);
-
-        cart1.add(headphoneItem1);
-        cart2.add(headphoneItem2);
-
-        System.out.println(cart1.equals(cart2)? "Carts are same" : "Carts are different");
-        System.out.println(cart1.hasSameIdentityAs(cart2)? "Carts are same"  : "Carts are different");
     }
 }

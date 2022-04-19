@@ -22,12 +22,15 @@ public class Product {
     }
 
     @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(name);
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
 }

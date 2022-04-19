@@ -26,4 +26,11 @@ public class CartId {
     public int hashCode() {
         return randomUUID.hashCode();
     }
+
+    @Override
+    public String toString() {
+        return "CartId{" +
+                "randomUUID=" + randomUUID +
+                '}';
+    }
 }

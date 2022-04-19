@@ -27,15 +27,8 @@ public class Cart implements Entity<Cart> {
         apply(itemAddedEvent);
     }
 
-
-
     public List<Item> getItems() {
         return items;
-    }
-
-    @Override
-    public String toString() {
-        return items.toString();
     }
 
     public void remove(Item item) {
@@ -82,5 +75,13 @@ public class Cart implements Entity<Cart> {
         if (this == other) return true;
         if (other == null || getClass() != other.getClass()) return false;
         return cartId.equals(other.cartId);
+    }
+
+    @Override
+    public String toString() {
+        return "Cart{" +
+                "cartId=" + cartId +
+                ", items=" + items +
+                '}';
     }
 }
